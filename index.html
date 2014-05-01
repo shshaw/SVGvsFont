@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" class="wf-museoslab-n3-active wf-museoslab-n5-active wf-proximanova-n3-active wf-proximanova-n4-active wf-proximanova-n6-active wf-proximanovascosf-n3-active wf-active"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Basic Page Needs
+ ================================================== -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Font Awesome, the iconic font designed for Bootstrap">
+  <meta name="author" content="Dave Gandy">
+  <link rel="shortcut icon" href="http://fortawesome.github.io/Font-Awesome/assets/ico/favicon.ico">
+
+  <title>SVG vs Fonts for Icons</title>
+
+  <!-- CSS
+  ================================================== -->
+  <link rel="stylesheet" href="http://fortawesome.github.io/Font-Awesome/assets/css/site.css">
+  <link rel="stylesheet" href="http://fortawesome.github.io/Font-Awesome/assets/css/pygments.css">
+  <link rel="stylesheet" href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" href="style.css">
+
+  <!--[if lt IE 9]>
+    <script src="../assets/js/html5shiv.js"></script>
+    <script src="../assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <style>
+    .jumbotron { text-align: center; }
+    .jumbotron h1 { font-size: 60px; }
+    .jumbotron a { color: #FFF; }
+    .jumbotron a:hover { text-decoration: none; }
+  </style>
+
+</head>
+<body>
+
+<svg id="fa" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32" class="hide">
+<defs>
+<g id="fa-code">
+	<path d="M11.018 24.982l-0.893 0.893q-0.179 0.179-0.411 0.179t-0.411-0.179l-8.321-8.321q-0.179-0.179-0.179-0.411t0.179-0.411l8.321-8.321q0.179-0.179 0.411-0.179t0.411 0.179l0.893 0.893q0.179 0.179 0.179 0.411t-0.179 0.411l-7.018 7.018 7.018 7.018q0.179 0.179 0.179 0.411t-0.179 0.411zM21.571 5.929l-6.661 23.054q-0.071 0.232-0.277 0.348t-0.42 0.045l-1.107-0.304q-0.232-0.071-0.348-0.277t-0.045-0.438l6.661-23.054q0.071-0.232 0.277-0.348t0.42-0.045l1.107 0.304q0.232 0.071 0.348 0.277t0.045 0.438zM33.304 17.554l-8.321 8.321q-0.179 0.179-0.411 0.179t-0.411-0.179l-0.893-0.893q-0.179-0.179-0.179-0.411t0.179-0.411l7.018-7.018-7.018-7.018q-0.179-0.179-0.179-0.411t0.179-0.411l0.893-0.893q0.179-0.179 0.411-0.179t0.411 0.179l8.321 8.321q0.179 0.179 0.179 0.411t-0.179 0.411z" />
+</g>
+</defs>
+</svg>
+<div id="wrap"> <!-- necessary for sticky footer. wrap all content except footer -->
+
+<div class="jumbotron jumbotron-ad hidden-print">
+  <div class="container">
+    <p>Choose this day whom you will serve...</p>
+    <div class="row">
+    <h1 class="col-sm-6"><a href="Font.html"><i class="fa fa-keyboard-o"></i>&nbsp; Font Icons</a></h1>
+    <h1 class="col-sm-6"><a href="SVG.html"><svg viewBox="0 0 34 32" class="fa fa-code"><use xlink:href="#fa-code"></use></svg>&nbsp; SVG Icons</a></h1>
+    </div>
+
+    <p><span class="btn-group"><a href="https://github.com/shshaw/SVGvsFont/" class="btn btn-default btn-sm">Fork</a> <a href="https://github.com/shshaw/SVGvsFont/issues" class="btn btn-default btn-sm">Discuss</a></span></p>
+  </div>
+</div>
+
+
+<div class="container">
+
+  <section class="hidden-print">
+  <div class="stripe-ad">
+
+  <p class="lead">
+    This is a basic comparison between an Inline SVG fonts and Font Icons using the <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a> icon set. It's not a perfect 1:1 comparison (styles, colors, icon selection), but meant to demonstrate the differences in the two methods. Run Network and performance tests and draw your own conclusions. Feel free to <a href="https://github.com/shshaw/SVGvsFont/">fork</a>, or <a href="https://github.com/shshaw/SVGvsFont/issues">start a discussion in the Issues</a>.
+  </p>
+
+  <h2>Initial Thoughts</h2>
+
+  <ul>
+  <li>Inline SVG adds a lot of page weight. The incomplete Font Awesome set is nearly 300kb (uncacheable since it's inline), and each icon has double the amount of markup when inserted.</li>
+  <li>SVG renders a lot faster, which may simply be related to the SVG being inline and the font as an external asset.</li>
+  <li>Font Awesome's icons are much cleaner as a font, would need some optimization to show up sharper at small sizes as SVG.</li>
+  <li>SVG Icons need the <code>viewBox</code> attribute to display at the right size. Setting a general <code>viewBox</code> means the icon may have extra spacing around it since some icons will be larger than others. Font icons are sized to fit the glyph.</li>
+  <li>With SVG <code>stroke</code>, outline versions of icons can share the same path as the original icon, though it may not look as sharp as a real outlined path.</li>
+  <li>Someone smarter than I will need to run performance testing to see how SVG Icons fair versus Font Icons.</li>
+  </ul>
+
+  </div>
+</section>
+
+</body></html>
