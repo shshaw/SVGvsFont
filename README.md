@@ -1,4 +1,6 @@
-SVGvsFont
+[SVGvsFont](http://shshaw.github.io/SVGvsFont/)
 =========
 
-Inline SVG Icons vs Font Icons, demonstrated with Font Awesome's icons.
+[Inline SVG Icons](http://shshaw.github.io/SVGvsFont/SVG.html) vs [Font Icons](http://shshaw.github.io/SVGvsFont/Font.html), demonstrated with Font Awesome's icons.
+
+[View Demo](http://shshaw.github.io/SVGvsFont)
