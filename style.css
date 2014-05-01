@@ -1,0 +1,32 @@
+
+  .jumbotron { text-align: center; }
+  .jumbotron h1 { font-size: 60px; }
+  .jumbotron a { color: #FFF; }
+  .jumbotron a:hover { text-decoration: none; }
+  .jumbotron svg.fa { fill: #FFF; }
+
+  .jumbotron .btn-default { color: #000; }
+  .jumbotron .btn-default svg.fa { fill: #000 }
+
+  .fa {
+    width: 1em;
+    height: 1em;
+  }
+
+  main .fa {
+    margin-right: 0.5em;
+  }
+
+  svg.fa {
+    display: inline-block;
+    fill: #000;
+    width: 1em;
+    height: 1em;
+    vertical-align: text-top;
+  }
+
+  svg.fa-o {
+    fill: none;
+    stroke: #000;
+    stroke-width: 2px;
+  }
