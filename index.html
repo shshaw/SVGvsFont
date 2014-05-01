@@ -56,25 +56,29 @@
 
 <div class="container">
 
-  <section class="hidden-print">
-  <div class="stripe-ad">
+  <section>
 
   <p class="lead">
-    This is a basic comparison between an Inline SVG fonts and Font Icons using the <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a> icon set. It's not a perfect 1:1 comparison (styles, colors, icon selection), but meant to demonstrate the differences in the two methods. Run Network and performance tests and draw your own conclusions. Feel free to <a href="https://github.com/shshaw/SVGvsFont/">fork</a>, or <a href="https://github.com/shshaw/SVGvsFont/issues">start a discussion in the Issues</a>.
-  </p>
+    This is a basic comparison between an Inline SVG fonts and Font Icons based on Chris Coyier's article <a href="http://css-tricks.com/icon-fonts-vs-svg/">Inline SVG vs Icon Fonts</a> and the comments within. Icons are from the <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a> icon set.</p>
+
+  <p>These tests are not a perfect 1:1 comparison (styles, colors, icon selection), but meant to demonstrate the differences in the two methods. Run your own network and performance tests to draw your own conclusions on each technique.</p>
+
+  <p>Feel free to <a href="https://github.com/shshaw/SVGvsFont/">fork</a> and <a href="https://github.com/shshaw/SVGvsFont/issues">share your findings in the Issues</a>.</p>
+
+  <hr />
 
   <h2>Initial Thoughts</h2>
 
   <ul>
-  <li>Inline SVG adds a lot of page weight. The incomplete Font Awesome set is nearly 300kb (uncacheable since it's inline), and each icon has double the amount of markup when inserted.</li>
-  <li>SVG renders a lot faster, which may simply be related to the SVG being inline and the font as an external asset.</li>
-  <li>Font Awesome's icons are much cleaner as a font, would need some optimization to show up sharper at small sizes as SVG.</li>
+  <li>Inline SVG adds a lot of page weight. The incomplete Font Awesome set is nearly 300kb (uncacheable since <a href="http://css-tricks.com/svg-sprites-use-better-icon-fonts/">it has to be inline</a>)</li>
+  <li>SVG renders a lot faster on the page, which may simply be related to the SVG being inline and the font as an external asset.</li>
+  <li>Each icon has double the amount of markup as SVG (<small><code>&lt;svg viewBox="0 0 34 32" class="fa fa-glass">&lt;use xlink:href="#fa-glass">&lt;/use>&lt;/svg></code></small>) versus Icon Font (<small><code>&lt;i class="fa fa-glass">&lt;/i></code></small>).</li>
   <li>SVG Icons need the <code>viewBox</code> attribute to display at the right size. Setting a general <code>viewBox</code> means the icon may have extra spacing around it since some icons will be larger than others. Font icons are sized to fit the glyph.</li>
-  <li>With SVG <code>stroke</code>, outline versions of icons can share the same path as the original icon, though it may not look as sharp as a real outlined path.</li>
+  <li>Font Awesome's icons are much sharper at small sizes as a font, would need additional optimization as SVG.</li>
+  <li>With SVG <code>stroke</code>, outline versions of icons can share the same path as the original icon, though it may not look as good as a real outlined path.</li>
   <li>Someone smarter than I will need to run performance testing to see how SVG Icons fair versus Font Icons.</li>
   </ul>
 
-  </div>
 </section>
 
 </body></html>
